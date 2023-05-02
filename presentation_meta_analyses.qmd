@@ -1,0 +1,65 @@
+---
+title: "Dose–response meta-analysis of non-occupational physical activity and risk of cardiovascular disease, cancer and mortality outcomes"
+author: "Ali Abbas"
+format:
+  revealjs:
+    transition: slide
+    transition-speed: fast
+    embed-resources: true
+    slide-number: c/t #< collapsed/total
+editor: visual
+---
+
+
+## Pretty Code {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+```r
+# Specify the cause, outcome_type and the dose
+rr -> drpa::dose_response(cause = cause_name, 
+        outcome_type = outcome_type, 
+        dose = float)
+```
+
+## Code Animations {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+```r
+# Specify the cause, outcome_type and the dose
+rr -> drpa::dose_response(cause = "all-cause-mortality", 
+        outcome_type = "fatal", 
+        dose = 40)
+```
+
+
+## Agenda
+
+## Meta-analysis
+
+## Physical Activity
+
+## Outcomes
+
+## Shape
+
+## PIFs
+
+## Code
+
+### RRs
+
+<!-- ## Quarto -->
+
+<!-- Not limited to just bullet points... -->
+
+<!-- Use `. . .` syntax to indicate a break at an arbitrary location -->
+
+<!-- . . . -->
+
+<!-- ```{r} -->
+<!-- head(mtcars) -->
+<!-- ``` -->
