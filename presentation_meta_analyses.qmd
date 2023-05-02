@@ -1,24 +1,63 @@
 ---
 title: "Dose–response meta-analysis of non-occupational physical activity and risk of cardiovascular disease, cancer and mortality outcomes"
 author: "Ali Abbas"
-format:
-  revealjs:
-    transition: slide
-    transition-speed: fast
+format: 
+  revealjs: 
     embed-resources: true
     slide-number: c/t #< collapsed/total
 editor: visual
 ---
 
+# Structure
+
+## Agenda
+
+-   Meta-Analysis
+-   Physical Activity (PA) and its relationship with diseases/mortality
+-   Outcomes of interest
+-   Population Impact Fraction of recommended levels of Physical Activity
+-   Code to access the dose-response curves
+
+# Meta-Analysis
+
+## What is meta-analysis?
+-   A statistical technique for combining data from multiple studies on a particular topic.
+-   As we go up the pyramid, each level of evidence is less subject to bias than the level below it
+-   Meta-analyses can be seen as the pinnacle of evidence-based research
+-   synthesizing evidence and summarizing the results of individual studies
+-   <div>
+    [![The Evidence-Based Medicine Pyramid](https://static.s4be.cochrane.org/app/uploads/2013/02/ebmpyramid.jpg)](https://s4be.cochrane.org/blog/2014/04/29/the-evidence-based-medicine-pyramid/)
+    </div>
+    
+::: footer
+<https://uk.cochrane.org/news/meta-analysis-what-why-and-how>
+:::
+
+## Meta-analysis of diseases and PA
+
+-   Cardiovascular diseases -- such as heart disease and stroke globally responsible for 17.9 million deaths per year in 2019
+-   Cancers are responsible for 9.6 million deaths in 2017
+
+## Physical Activity
+
+-   Physical Activity is known to reduce the risk of cardiovascular diseases and Cancer
+
+# Outcomes
+
+## Outcomes
+
+## PIFs
+
+## Code
 
 ## Pretty Code {auto-animate="true"}
 
 -   Over 20 syntax highlighting themes available
 -   Default theme optimized for accessibility
 
-```r
+``` r
 # Specify the cause, outcome_type and the dose
-rr -> drpa::dose_response(cause = cause_name, 
+rr <- drpa::dose_response(cause = cause_name, 
         outcome_type = outcome_type, 
         dose = float)
 ```
@@ -28,29 +67,17 @@ rr -> drpa::dose_response(cause = cause_name,
 -   Over 20 syntax highlighting themes available
 -   Default theme optimized for accessibility
 
-```r
+```{r, echo = FALSE, message=FALSE}
+#| code-line-numbers: "2|3|4"
 # Specify the cause, outcome_type and the dose
-rr -> drpa::dose_response(cause = "all-cause-mortality", 
+rr <- drpa::dose_response(cause = "all-cause-mortality", 
         outcome_type = "fatal", 
         dose = 40)
 ```
 
-
-## Agenda
-
-## Meta-analysis
-
-## Physical Activity
-
-## Outcomes
-
-## Shape
-
-## PIFs
-
-## Code
-
-### RRs
+::: footer
+<https://meta-analyses.github.io/drpa/drpa.html>
+:::
 
 <!-- ## Quarto -->
 
@@ -61,5 +88,7 @@ rr -> drpa::dose_response(cause = "all-cause-mortality",
 <!-- . . . -->
 
 <!-- ```{r} -->
+
 <!-- head(mtcars) -->
+
 <!-- ``` -->
