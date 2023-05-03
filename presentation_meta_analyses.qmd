@@ -15,20 +15,24 @@ editor: visual
 -   Meta-Analysis
 -   Physical Activity (PA) and its relationship with diseases/mortality
 -   Outcomes of interest
--   Population Impact Fraction of recommended levels of Physical Activity
+-   Interactive Interface
 -   Code to access the dose-response curves
 
 # Meta-Analysis
 
 ## What is meta-analysis?
--   A statistical technique for combining data from multiple studies on a particular topic.
--   As we go up the pyramid, each level of evidence is less subject to bias than the level below it
--   Meta-analyses can be seen as the pinnacle of evidence-based research
--   synthesizing evidence and summarizing the results of individual studies
--   <div>
-    [![The Evidence-Based Medicine Pyramid](https://static.s4be.cochrane.org/app/uploads/2013/02/ebmpyramid.jpg)](https://s4be.cochrane.org/blog/2014/04/29/the-evidence-based-medicine-pyramid/)
-    </div>
-    
+
+::: columns
+::: {.column width="60%"}
+-   Statistical technique for combining data from multiple studies on a particular topic.
+-   Synthesizing evidence and summarizing the results of individual studies
+:::
+
+::: {.column width="40%"}
+[![The Evidence-Based Medicine Pyramid](https://static.s4be.cochrane.org/app/uploads/2013/02/ebmpyramid.jpg)](https://s4be.cochrane.org/blog/2014/04/29/the-evidence-based-medicine-pyramid/)
+:::
+:::
+
 ::: footer
 <https://uk.cochrane.org/news/meta-analysis-what-why-and-how>
 :::
@@ -40,13 +44,34 @@ editor: visual
 
 ## Physical Activity
 
--   Physical Activity is known to reduce the risk of cardiovascular diseases and Cancer
+-   Physical Activity is known to reduce the risk of cardiovascular diseases and cancers
 
-# Outcomes
+    [![dose-response paper](img/paper.png)](https://bjsm.bmj.com/content/early/2023/01/23/bjsports-2022-105669)
+
+# Interactive Interface
 
 ## Outcomes
 
-## PIFs
+::: {layout-ncol="2"}
+![](img/outcomes-list.png)
+
+![](img/outcome-categories.png)
+:::
+
+Footer: non-significant associations were observed for kidney, bladder, esophageal, prostate and rectal cancer
+
+## Outcome category and type
+
+|                                 |                                       |
+|---------------------------------|---------------------------------------|
+| ![](img/outcome-categories.png) | ![](img/outcome-n-pop-categories.png) |
+
+## Meta-analysis and dose-range
+
+|                      |
+|----------------------|
+| ![](img/dose-re.png) |
+| ![](img/MA.png)      |
 
 ## Code
 
