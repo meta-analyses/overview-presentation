@@ -1,6 +1,8 @@
 ---
 title: "Meta-analysis of non-occupational physical activity and cardiovascular disease, cancer and mortality outcomes"
 author: "Ali Abbas"
+date: 05/05/2023
+date-format: long
 format: 
   revealjs: 
     embed-resources: true
@@ -53,18 +55,32 @@ bibliography: references.bib
 
 -   Cardiovascular diseases cause 17.9 million deaths per year in 2019
 -   Cancers are responsible for 9.6 million deaths in 2017
+-   Physical Activity is known to reduce the risk of cardiovascular diseases, cancers and early deaths
 
 ## Physical Activity
 
--   Physical Activity is known to reduce the risk of cardiovascular diseases and cancers @garcia2023non
+-   The shape of the dose-response curves has not been established for a range of chronic diseases (@garcia2023non)
+-   Key finding: 1 in 10 premature deaths can be avoided if everyone achieves 75 minutes of vigorous-intensity activity a week
+-   Higher level of PA is associated with lower risk of all outcomes [![dose-response paper](img/paper.png)](https://bjsm.bmj.com/content/early/2023/01/23/bjsports-2022-105669)
 
-    [![dose-response paper](img/paper.png)](https://bjsm.bmj.com/content/early/2023/01/23/bjsports-2022-105669)
+## Eligibility Criteria
+
+-   Prospective cohort studies with general population samples of greater than 10K adults
+-   3 or more physical activity categories
+-   Risk measures and Confidence Interval (CIs) for host of measures/disease end points
+
+## Studies
+
+-   196 studies
+-   94 cohorts
+-   `>` 30 Million participants
 
 # Interactive Interface
 
 ## Outcomes - overall
 
 ![](img/overall_health_outcomes.svg)
+
 ## Outcomes - Level 1
 
 ![](img/overall_health_outcomes_L1.svg)
@@ -90,21 +106,22 @@ bibliography: references.bib
 | ![](img/dose-re.png){width="590"} |
 | ![](img/MA.png){width="590"}      |
 
-## Dose range and Potential Impact Fraction
+## Dose distribution and Potential Impact Fraction (PIF)
 
 |                                      |                   |
 |--------------------------------------|-------------------|
 | ![](img/dose-distr.png){width="812"} | ![](img/PIFs.png) |
 
-## Code
+# Code
 
 ## R Package {auto-animate="true"}
 
--   An R package called `dose-response physical activity` is created
+-   An R package called `dose-response physical activity (drpa)` is created
 -   It is open source and hosted on GitHub
 -   You may need to install it used `remotes::install_github("meta-analyses/drpa")`
 
 . . .
+
 ``` r
 # Specify the cause, outcome_type and the dose
 rr <- drpa::dose_response(cause = cause_name, 
@@ -115,8 +132,7 @@ rr <- drpa::dose_response(cause = cause_name,
 ## Code Animations {auto-animate="true"}
 
 -   An R package called `dose-response physical activity` is created
--   It is open source and hosted on GitHub
-. . .
+-   It is open source and hosted on GitHub . . .
 
 ```{r, echo = FALSE, message=FALSE}
 #| code-line-numbers: "2|3|4"
