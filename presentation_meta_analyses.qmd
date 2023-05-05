@@ -80,27 +80,51 @@ bibliography: references.bib
 
 ## Outcomes - overall
 
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
+
 ![](img/overall_health_outcomes.svg)
 
 ## Outcomes - Level 1
+
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
 
 ![](img/overall_health_outcomes_L1.svg)
 
 ## Outcomes - Level 2
 
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
+
 ![](img/overall_health_outcomes_L2.svg)
 
 ## Outcomes - Level 3
 
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
+
 ![](img/overall_health_outcomes_L3.svg)
 
 ## Outcome category and type
+
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
 
 |                                 |                                       |
 |---------------------------------|---------------------------------------|
 | ![](img/outcome-categories.png) | ![](img/outcome-n-pop-categories.png) |
 
 ## Meta-analysis and dose-range
+
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
 
 |                                   |
 |-----------------------------------|
@@ -109,6 +133,10 @@ bibliography: references.bib
 
 ## Dose distribution and Potential Impact Fraction (PIF)
 
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
+
 |                                      |                   |
 |--------------------------------------|-------------------|
 | ![](img/dose-distr.png){width="812"} | ![](img/PIFs.png) |
@@ -116,6 +144,10 @@ bibliography: references.bib
 # Code
 
 ## R Package {auto-animate="true"}
+
+::: footer
+<https://meta-analyses.github.io/drpa/drpa.html>
+:::
 
 -   An R package called `dose-response physical activity (drpa)` is created
 -   It is open source and hosted on GitHub
@@ -130,37 +162,62 @@ rr <- drpa::dose_response(cause = cause_name,
         dose = float)
 ```
 
-## Code Animations {auto-animate="true"}
-
--   An R package called `dose-response physical activity` is created
--   It is open source and hosted on GitHub . . .
-
-```{r, echo = FALSE, message=FALSE}
-#| code-line-numbers: "2|3|4"
-# Specify the cause, outcome_type and the dose
-rr <- drpa::dose_response(cause = "all-cause-mortality", 
-        outcome_type = "fatal", 
-        dose = 40)
-```
+## R Package use {auto-animate="true"}
 
 ::: footer
 <https://meta-analyses.github.io/drpa/drpa.html>
 :::
 
-## Arguments
+::: nonincremental
+-   An R package called `dose-response physical activity` is created
+-   It is open source and hosted on GitHub . . .
+-   You may need to install it used `remotes::install_github("meta-analyses/drpa")`
+:::
 
-[![Arguments for the dose_response function](img/drpa-args.png)](https://meta-analyses.github.io/drpa/drpa.html)
+. . .
 
-<!-- ## Quarto -->
+``` r
+# Specify the cause, outcome_type, dose and the confidence interval
+rr <- drpa::dose_response(cause = "all-cause-mortality", 
+        outcome_type = "fatal", 
+        dose = 40,
+        confidence_interval = TRUE)
+```
 
-<!-- Not limited to just bullet points... -->
+. . .
 
-<!-- Use `. . .` syntax to indicate a break at an arbitrary location -->
+```{r, echo=FALSE}
 
-<!-- . . . -->
+#| tbl-cap: "Cars"
+#| tbl-colwidths: [60,40]
+#| tbl-cap-location: margin
 
-<!-- ```{r} -->
+rr <- drpa::dose_response(cause = "all-cause-mortality", 
+        outcome_type = "fatal", 
+        dose = 40,
+        confidence_interval = TRUE)
 
-<!-- head(mtcars) -->
+names(rr) <- c("Relative Risk", "Lower Bound", "Upper Bound")
 
-<!-- ``` -->
+library(knitr)
+knitr::kable(rr, align = "lccrr", caption = "An example output", digits = 2)
+
+```
+
+## R Package arguments {auto-animate="true"}
+
+::: footer
+<https://meta-analyses.github.io/drpa/drpa.html>
+:::
+
+. . . [![Arguments for the dose_response function](img/drpa-args.png)](https://meta-analyses.github.io/drpa/drpa.html)
+
+## Lookup table
+
+::: footer
+<https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
+:::
+
+. . .
+
+![Lookup table for All-cause mortality](img/lookup_table.png)
