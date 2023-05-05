@@ -3,6 +3,7 @@ title: "Meta-analysis of non-occupational physical activity and cardiovascular d
 author: "Ali Abbas"
 date: 05/05/2023
 date-format: long
+institute: MRC-Epidemiology Unit, University of Cambridge
 format: 
   revealjs: 
     embed-resources: true
