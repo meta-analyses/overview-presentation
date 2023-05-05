@@ -20,7 +20,7 @@ execute:
   # warning: false
   # message: false
   size: "huge"
-bibliography: references.bib
+#bibliography: references.bib
 ---
 
 # Structure
@@ -214,10 +214,8 @@ knitr::kable(rr, align = "lccrr", caption = "An example output", digits = 2)
 
 ## Lookup table
 
+. . . ![Lookup table for All-cause mortality](img/lookup_table.png)
+
 ::: footer
 <https://shiny.mrc-epid.cam.ac.uk/meta-analyses-physical-activity/>
 :::
-
-. . .
-
-![Lookup table for All-cause mortality](img/lookup_table.png)
